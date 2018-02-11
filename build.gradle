@@ -26,6 +26,11 @@ targetCompatibility = 1.8
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+    compile("org.springframework.boot:spring-boot-devtools")	
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-parent', version: '1.5.10.RELEASE'
+    
+    
     testCompile("junit:junit")
 }
 
