@@ -1,4 +1,4 @@
-package hello;
+package com.somecompany.trading;
 
 import org.springframework.context.ApplicationEvent;
 

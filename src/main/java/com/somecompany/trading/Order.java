@@ -1,4 +1,4 @@
-package hello;
+package com.somecompany.trading;
 
 public class Order {
 
