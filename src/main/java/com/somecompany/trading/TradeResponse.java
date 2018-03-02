@@ -1,13 +1,13 @@
 package com.somecompany.trading;
 
-public class Greeting {
+public class TradeResponse {
 
     private String content;
 
-    public Greeting() {
+    public TradeResponse() {
     }
 
-    public Greeting(String content) {
+    public TradeResponse(String content) {
         this.content = content;
     }
 
