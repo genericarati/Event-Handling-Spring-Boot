@@ -21,19 +21,17 @@ public class OrderController {
 
 	@RequestMapping("/dealer1")
 	public List<Order> getDealer1() {
-		// eventCaller.callFromMain();
 		List<Order> orders = new ArrayList<Order>();
-		orders.add(new Order("order1", "dealer1"));
+		orders.add(new Order("order1", "company stock"));
 		orders.add(new Order("order2", "dealer1"));
 		return orders;
 	}
 
 	@RequestMapping("/dealer2")
 	public List<Order> getDealer2() {
-		// eventCaller.callFromMain();
 		List<Order> orders = new ArrayList<Order>();
 		orders.add(new Order("order3", "dealer2"));
-		orders.add(new Order("order4", "dealer2"));
+		orders.add(new Order("order4", "company stock"));
 		return orders;
 	}
 
