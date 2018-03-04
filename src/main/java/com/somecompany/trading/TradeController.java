@@ -10,9 +10,9 @@ public class TradeController {
 
     @MessageMapping("/trade")
     @SendTo("/topic/tradeResponse")
-    public TradeResponse greeting(Order order) throws Exception {
-    		//do something so order is assigned to right dealership
-        return new TradeResponse(order.ordernumber + " is traded!");
+    public TradeResponse returnTradeResponse(TradeRequest request) throws Exception {
+    		System.out.println("test-"+request.toString());
+        return new TradeResponse(request.order.ordernumber + " is traded!");
     }
 
 }

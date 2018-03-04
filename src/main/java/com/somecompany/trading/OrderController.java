@@ -20,23 +20,23 @@ public class OrderController {
 	EventCaller eventCaller;
 
 	@RequestMapping("/dealer1")
-	public List<Order> getDealer1() {
-		List<Order> orders = new ArrayList<Order>();
-		orders.add(new Order("order1", "company stock"));
-		orders.add(new Order("order2", "dealer1"));
+	public List<TradeRequest> getDealer1() {
+		List<TradeRequest> orders = new ArrayList<TradeRequest>();
+		orders.add(new TradeRequest(new Order("order1", "company stock"),""));
+		orders.add(new TradeRequest(new Order("order2", "dealer1"),""));
 		return orders;
 	}
 
 	@RequestMapping("/dealer2")
-	public List<Order> getDealer2() {
-		List<Order> orders = new ArrayList<Order>();
-		orders.add(new Order("order3", "dealer2"));
-		orders.add(new Order("order4", "company stock"));
+	public List<TradeRequest> getDealer2() {
+		List<TradeRequest> orders = new ArrayList<TradeRequest>();
+		orders.add(new TradeRequest(new Order("order3", "dealer2"),""));
+		orders.add(new TradeRequest(new Order("order4", "company stock"),""));
 		return orders;
 	}
 
 	@RequestMapping(value = "/requestTrade", method = RequestMethod.POST)
-	public ResponseEntity<String> requestTrade(@RequestBody Order order) {
+	public ResponseEntity<String> requestTrade(@RequestBody TradeRequest order) {
 		ResponseEntity<String> response;
 		try {
 			response = new ResponseEntity<>(HttpStatus.OK);
